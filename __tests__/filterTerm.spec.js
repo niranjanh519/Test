@@ -1,5 +1,4 @@
-const filterByTerm = require('../filterByTerm');
-const codesmell = require('../codesmell');
+const {codeSmell,filterByTerm }= require('../filterByTerm');
 
 describe("Filter function", () => {
   test("it should filter by a search term (link)", () => {
@@ -14,5 +13,13 @@ describe("Filter function", () => {
     expect(filterByTerm(input, "link")).toEqual(output);
 
     expect(filterByTerm(input, "LINK")).toEqual(output);
+  });
+});
+
+
+describe("Code Smell", () => {
+  test("should return 5", () => {
+
+    expect(codeSmell()).toEqual(5);
   });
 });

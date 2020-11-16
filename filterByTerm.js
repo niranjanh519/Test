@@ -7,4 +7,13 @@ function filterByTerm(inputArr, searchTerm) {
   });
 }
 
-module.exports = filterByTerm;
+const codeSmell = () => {
+	let a = 5;
+	return a;
+}
+
+module.exports = {
+	filterByTerm,
+	codeSmell
+}
+
