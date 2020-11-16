@@ -15,3 +15,11 @@ describe("Filter function", () => {
     expect(filterByTerm(input, "LINK")).toEqual(output);
   });
 });
+
+
+describe("Code Smell", () => {
+  test("should return 5", () => {
+
+    expect(codeSmell()).toEqual(5);
+  });
+});
