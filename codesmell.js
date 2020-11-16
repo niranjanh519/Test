@@ -2,7 +2,7 @@ const codeSmell = () => {
 	let a = 5;
 	return a;
 
-	a= 24;
+	a= 256;
 
 	// doing somthing extra here
 
