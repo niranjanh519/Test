@@ -1,5 +1,4 @@
-const filterByTerm = require('../filterByTerm');
-const codesmell = require('../codesmell');
+const {codeSmell,filterByTerm }= require('../filterByTerm');
 
 describe("Filter function", () => {
   test("it should filter by a search term (link)", () => {
