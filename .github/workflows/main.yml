@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 'feature/*'
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
@@ -21,6 +22,7 @@ jobs:
       - run: npm run test
       - run: npm run testWithCoverage
       - run: ls
+      - run: curl -v -X POST https://${{ secrets.SONAR_ROOT_TOKEN }}@sonarcloud.io/api/projects/create -d "name=feature1&project=feature1&organization=anand4nc"
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
