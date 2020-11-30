@@ -10,7 +10,7 @@ function filterByTerm(inputArr, searchTerm) {
 const codeSmell = () => {
 	let a = 5;
   return a;
-	a=5657;
+	a=56;
 }
 
 module.exports = {
