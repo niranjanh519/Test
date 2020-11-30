@@ -22,12 +22,12 @@ jobs:
       - run: npm run test
       - run: npm run testWithCoverage
       - run: ls
-      - run: curl -v -X POST https://${{ secrets.SONAR_ROOT_TOKEN }}@sonarcloud.io/api/projects/create -d "name=feature1&project=feature1&organization=anand4nc"
+      - run: curl -v -X POST https://${{ secrets.SONAR_ROOT_TOKEN }}@sonarcloud.io/api/projects/create -d "name=feature2&project=feature2&organization=anand4nc"
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         with:
           args: >
-            -Dsonar.projectKey=feature1
+            -Dsonar.projectKey=feature2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
